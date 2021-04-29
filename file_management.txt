@@ -1,0 +1,49 @@
+How to use files in a C program:
+--------------------------------
+
+STEP #1:
+--------
+	We use a FILE pointer to work with files in C.
+ex: FILE* ptr;
+
+STEP #2:
+--------
+	We use fopen() function from the stdio.h header file to open any file.
+ex: file* ptr;
+    ptr = fopen("location_to_file/file_name", "file_opening_mode");
+
+STEP #3:
+--------
+	File Opening Types:
+	-------------------
+	
+	+----+----------+
+	|Mode|Meaning   |
+	+----+----------+
+	|"r" |read      |
+	+----+----------+
+	|"w" |write     |
+	+----+----------+
+	|"a" |append    |
+	+----+----------+
+	|"r+"|read+write|
+	+----+----------+
+	
+STEP #4:
+--------
+	We perform the operation we want.
+ex: fprint(), fseek(), fscan(), ...
+
+STEP #5:
+--------
+	We use fclose() function when we finish from the file we are using.
+ex: //create a file pointer.
+    file* ptr;
+    
+    //open a file called hello.txt.
+    ptr = fopen("location_to_file/file_name", "file_opening_mode");
+    
+    //perform file operation.
+    
+    //close the file.
+    fclose(ptr);
